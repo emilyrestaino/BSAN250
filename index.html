@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relay — Sports content operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#" aria-label="Relay home"><span class="brand-mark">R</span><span>relay</span></a>
+      <div class="workspace-switcher">
+        <span class="avatar avatar-coral">SC</span>
+        <span><strong>Summit content</strong><small>Pro workspace</small></span>
+        <span class="chevron">⌄</span>
+      </div>
+      <nav class="nav-list">
+        <p class="nav-label">Workspace</p>
+        <a class="nav-item active" href="#overview"><span class="nav-icon">▦</span>Overview</a>
+        <a class="nav-item" href="#calendar"><span class="nav-icon">◷</span>Content calendar <b class="nav-count">12</b></a>
+        <a class="nav-item" href="#inbox"><span class="nav-icon">◇</span>Review inbox <b class="nav-count alert">4</b></a>
+        <a class="nav-item" href="#library"><span class="nav-icon">▤</span>Asset library</a>
+        <p class="nav-label nav-label-spaced">Manage</p>
+        <a class="nav-item" href="#channels"><span class="nav-icon">↗</span>Channels</a>
+        <a class="nav-item" href="#team"><span class="nav-icon">♧</span>Team</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a class="nav-item" href="#settings"><span class="nav-icon">⚙</span>Settings</a>
+        <div class="help-card"><span class="help-icon">?</span><span><strong>Need a hand?</strong><small>Visit our resource center</small></span><span>↗</span></div>
+        <div class="profile"><span class="avatar avatar-lilac">ER</span><span><strong>Emily Restaino</strong><small>Content manager</small></span><span class="more">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <button class="mobile-menu" aria-label="Open navigation">☰</button>
+        <div class="breadcrumb"><span>Workspace</span><span>/</span><strong>Overview</strong></div>
+        <div class="top-actions"><button class="icon-button" aria-label="Search">⌕</button><button class="icon-button" aria-label="Notifications">♢<i></i></button><button class="primary-button" id="create-button"><span>＋</span> Create content</button></div>
+      </header>
+
+      <div class="page-wrap">
+        <section class="welcome-row">
+          <div><p class="eyebrow">Wednesday, September 18, 2024</p><h1>Good morning, Emily <span>✦</span></h1><p class="intro">Here’s what’s moving across your sports desk today.</p></div>
+          <div class="date-control"><span class="live-dot"></span>Season mode: <strong>Fall 2024</strong><span class="chevron">⌄</span></div>
+        </section>
+
+        <section class="stats-grid" aria-label="Workspace metrics">
+          <article class="stat-card"><div class="stat-top"><span>Published this week</span><span class="stat-icon green">↗</span></div><strong class="stat-value">28</strong><span class="stat-change up">↑ 18.4% <em>vs last week</em></span><div class="sparkline green-line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></article>
+          <article class="stat-card"><div class="stat-top"><span>In review</span><span class="stat-icon yellow">◌</span></div><strong class="stat-value">07</strong><span class="stat-change neutral">3 due today</span><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article class="stat-card"><div class="stat-top"><span>Audience reach</span><span class="stat-icon blue">◎</span></div><strong class="stat-value">1.24M</strong><span class="stat-change up">↑ 9.2% <em>vs last week</em></span><div class="sparkline blue-line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></article>
+          <article class="stat-card"><div class="stat-top"><span>Team velocity</span><span class="stat-icon coral">✦</span></div><strong class="stat-value">86<small>%</small></strong><span class="stat-change up">↑ 4.1% <em>vs last week</em></span><div class="progress"><span></span></div></article>
+        </section>
+
+        <div class="dashboard-grid">
+          <section class="panel queue-panel" id="calendar">
+            <div class="panel-heading"><div><h2>Today’s content queue</h2><p>Friday, September 20 <span class="dot-separator">•</span> 6 pieces scheduled</p></div><button class="text-button">View calendar <span>→</span></button></div>
+            <div class="queue-filters"><div class="filter-tabs"><button class="filter-tab selected" data-filter="all">All <span>6</span></button><button class="filter-tab" data-filter="review">Needs review <span>2</span></button><button class="filter-tab" data-filter="ready">Ready <span>3</span></button></div><button class="sort-button">Sort: Time <span>⌄</span></button></div>
+            <div class="content-list">
+              <article class="content-row" data-status="ready"><div class="time"><strong>09:00</strong><span>AM</span></div><div class="content-thumb thumb-field"><span>NBA</span></div><div class="content-info"><div class="title-line"><h3>Power rankings: the early NBA contenders</h3><span class="channel-badge">NEWSLETTER</span></div><p>By Jordan Lee <span>•</span> 5 min read</p></div><span class="status ready">Ready</span><button class="row-menu" aria-label="More options">•••</button></article>
+              <article class="content-row" data-status="review"><div class="time"><strong>10:30</strong><span>AM</span></div><div class="content-thumb thumb-track"><span>TRACK</span></div><div class="content-info"><div class="title-line"><h3>Photo essay: inside the final night at Hayward</h3><span class="channel-badge">WEB</span></div><p>By Maya Chen <span>•</span> 12 assets</p></div><span class="status review">In review</span><button class="row-menu" aria-label="More options">•••</button></article>
+              <article class="content-row" data-status="ready"><div class="time"><strong>12:00</strong><span>PM</span></div><div class="content-thumb thumb-court"><span>WNBA</span></div><div class="content-info"><div class="title-line"><h3>Game day guide: Liberty vs. Sun</h3><span class="channel-badge">SOCIAL</span></div><p>By Alex Morgan <span>•</span> 4 platforms</p></div><span class="status ready">Ready</span><button class="row-menu" aria-label="More options">•••</button></article>
+              <article class="content-row" data-status="review"><div class="time"><strong>03:45</strong><span>PM</span></div><div class="content-thumb thumb-run"><span>STORY</span></div><div class="content-info"><div class="title-line"><h3>The long road back: Aisha Williams</h3><span class="channel-badge">WEB</span></div><p>By Jordan Lee <span>•</span> Draft updated 8m ago</p></div><span class="status review">In review</span><button class="row-menu" aria-label="More options">•••</button></article>
+              <article class="content-row" data-status="ready"><div class="time"><strong>06:00</strong><span>PM</span></div><div class="content-thumb thumb-stadium"><span>LIVE</span></div><div class="content-info"><div class="title-line"><h3>Friday night lights: live blog</h3><span class="channel-badge">LIVE BLOG</span></div><p>By Sam Rivera <span>•</span> Event coverage</p></div><span class="status ready">Ready</span><button class="row-menu" aria-label="More options">•••</button></article>
+            </div>
+            <button class="add-row" id="add-content">＋ Add to today’s queue</button>
+          </section>
+
+          <aside class="right-rail">
+            <section class="panel inbox-panel" id="inbox"><div class="panel-heading compact"><div><h2>Review inbox</h2><p>Items waiting on you</p></div><span class="inbox-count">4</span></div><div class="review-list"><div class="review-item"><span class="review-avatar teal">MC</span><div><strong>Hayward photo essay</strong><p>Maya Chen <span>•</span> 12m ago</p></div><span class="arrow">→</span></div><div class="review-item"><span class="review-avatar orange">JL</span><div><strong>WNBA weekend preview</strong><p>Jordan Lee <span>•</span> 26m ago</p></div><span class="arrow">→</span></div><div class="review-item"><span class="review-avatar pink">AR</span><div><strong>Social cut: Liberty</strong><p>Alex Morgan <span>•</span> 1h ago</p></div><span class="arrow">→</span></div></div><button class="outline-button">Open review inbox <span>→</span></button></section>
+            <section class="panel activity-panel"><div class="panel-heading compact"><div><h2>Team activity</h2><p>Latest workspace updates</p></div><button class="more-button">•••</button></div><div class="activity-feed"><div class="activity"><span class="review-avatar orange">JL</span><p><strong>Jordan Lee</strong> moved <b>Power rankings</b> to ready <small>8 minutes ago</small></p></div><div class="activity"><span class="review-avatar teal">MC</span><p><strong>Maya Chen</strong> added 12 assets to <b>Hayward photo essay</b> <small>24 minutes ago</small></p></div><div class="activity"><span class="review-avatar lilac">ER</span><p><strong>You</strong> scheduled <b>WNBA weekend preview</b> <small>1 hour ago</small></p></div></div></section>
+          </aside>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status">Draft added to today’s queue</div>
+  <script src="app.js"></script>
+</body>
+</html>
